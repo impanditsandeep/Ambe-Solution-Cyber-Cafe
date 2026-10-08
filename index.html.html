@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambe Solution & Cyber Cafe | High School Road, Mananpur Bazar</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        cyber: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#2563eb',
+                            600: '#1d4ed8',
+                            700: '#1e40af',
+                            800: '#1e3a8a',
+                            900: '#0f172a',
+                            accent: '#06b6d4',
+                            amber: '#f59e0b'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'marquee': 'marquee 28s linear infinite',
+                    },
+                    keyframes: {
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar & glassmorphism enhancements */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1e3a8a;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563eb;
+        }
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.65);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .glass-card-light {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(226, 232, 240, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-cyan-500 selection:text-white">
+
+    <!-- Top Announcement Bar -->
+    <div class="bg-gradient-to-r from-blue-900 via-indigo-900 to-cyan-900 text-xs sm:text-sm text-cyan-200 border-b border-cyan-800/40 relative z-50 overflow-hidden py-2 px-4 shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+            <div class="flex items-center gap-2 shrink-0 bg-red-600 text-white font-bold px-2 py-0.5 rounded text-[11px] tracking-wider uppercase animate-pulse">
+                <span>🔴 Live Alerts</span>
+            </div>
+            <div class="overflow-hidden relative w-full flex">
+                <div class="flex whitespace-nowrap animate-marquee space-x-12 font-medium">
+                    <span class="inline-flex items-center gap-2">📢 BPSC TRE, Railway RRB & SSC GD Forms Active Now</span>
+                    <span class="inline-flex items-center gap-2">⚡ RTPS Bihar (Jati, Niwas, Aay & EWS) Instant Application</span>
+                    <span class="inline-flex items-center gap-2">🪪 Smart PVC Aadhaar, PAN & Ayushman Card Printing in 2 Minutes</span>
+                    <span class="inline-flex items-center gap-2">💰 Cash Withdrawal via Aadhaar (AEPS) & Fast Money Transfer Available</span>
+                    <!-- Duplicate for infinite loop -->
+                    <span class="inline-flex items-center gap-2">📢 BPSC TRE, Railway RRB & SSC GD Forms Active Now</span>
+                    <span class="inline-flex items-center gap-2">⚡ RTPS Bihar (Jati, Niwas, Aay & EWS) Instant Application</span>
+                    <span class="inline-flex items-center gap-2">🪪 Smart PVC Aadhaar, PAN & Ayushman Card Printing in 2 Minutes</span>
+                    <span class="inline-flex items-center gap-2">💰 Cash Withdrawal via Aadhaar (AEPS) & Fast Money Transfer Available</span>
+                </div>
+            </div>
+            <div class="hidden lg:flex items-center gap-4 shrink-0 text-slate-300 text-xs">
+                <span>📍 Mananpur Bazar, Lakhisarai</span>
+                <span class="text-cyan-400 font-semibold">🕒 7:00 AM - 8:30 PM (All Days)</span>
+            </div>
+        </div>
+    </div>
+
+    <header class="sticky top-0 z-40 glass-nav border-b border-slate-800/80 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo / Badge -->
+                <a href="#home" class="flex items-center gap-3.5 group">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-blue-600 to-cyan-400 p-0.5 shadow-lg shadow-cyan-500/20 group-hover:scale-105 transition-transform">
+                        <div class="w-full h-full bg-slate-900 rounded-[14px] flex items-center justify-center">
+                            <i data-lucide="cpu" class="w-6 h-6 text-cyan-400 group-hover:rotate-12 transition-transform"></i>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-xl sm:text-2xl font-black tracking-tight text-white group-hover:text-cyan-400 transition-colors">
+                                Ambe Solution
+                            </span>
+                            <span class="bg-blue-900/60 text-cyan-400 border border-cyan-500/30 text-[10px] uppercase font-bold px-1.5 py-0.5 rounded">Cyber Hub</span>
+                        </div>
+                        <p class="text-[11px] text-slate-400 flex items-center gap-1 font-medium">
+                            <i data-lucide="map-pin" class="w-3 h-3 text-red-400"></i> Mananpur Bazar, Lakhisarai
+                        </p>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-3 text-sm font-semibold">
+                    <a href="#home" class="px-3 py-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors">Home</a>
+                    <a href="#services" class="px-3 py-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors">All Services</a>
+                    <a href="#calculator" class="px-3 py-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors">Price Estimator</a>
+                    <a href="#specs" class="px-3 py-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors">Exam Tool Kit</a>
+                    <a href="#contact" class="px-3 py-2 text-slate-300 hover:text-cyan-400 hover:bg-slate-800/50 rounded-lg transition-colors">Contact</a>
+                </nav>
+
+                <!-- Header Action Buttons -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <a href="tel:6206082643" class="inline-flex items-center gap-2 px-3.5 py-2.5 rounded-xl text-xs font-bold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 transition">
+                        <i data-lucide="phone-call" class="w-4 h-4 text-emerald-400"></i>
+                        <span>6206082643</span>
+                    </a>
+                    <button onclick="openBookingModal('General Inquiry')" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 shadow-md shadow-blue-500/25 transition transform hover:-translate-y-0.5">
+                        <i data-lucide="send" class="w-4 h-4"></i>
+                        <span>Apply / Upload Docs</span>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="flex md:hidden items-center gap-2">
+                    <button onclick="openBookingModal('Mobile Quick Booking')" class="p-2 rounded-lg bg-blue-600 text-white text-xs font-semibold">
+                        <i data-lucide="file-up" class="w-5 h-5"></i>
+                    </button>
+                    <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="p-2.5 rounded-xl bg-slate-800 text-slate-300 hover:text-white border border-slate-700">
+                        <i data-lucide="menu" id="menuIcon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-6 py-5 space-y-4 shadow-2xl">
+            <div class="flex flex-col space-y-2 text-base font-semibold">
+                <a href="#home" class="mobile-nav-link py-2.5 text-slate-200 hover:text-cyan-400 flex items-center justify-between border-b border-slate-800/60">
+                    <span>Home</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                </a>
+                <a href="#services" class="mobile-nav-link py-2.5 text-slate-200 hover:text-cyan-400 flex items-center justify-between border-b border-slate-800/60">
+                    <span>Our Services</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                </a>
+                <a href="#calculator" class="mobile-nav-link py-2.5 text-slate-200 hover:text-cyan-400 flex items-center justify-between border-b border-slate-800/60">
+                    <span>Price Estimator</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                </a>
+                <a href="#specs" class="mobile-nav-link py-2.5 text-slate-200 hover:text-cyan-400 flex items-center justify-between border-b border-slate-800/60">
+                    <span>Photo/Signature Guidelines</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                </a>
+                <a href="#contact" class="mobile-nav-link py-2.5 text-slate-200 hover:text-cyan-400 flex items-center justify-between">
+                    <span>Location & Contact</span> <i data-lucide="chevron-right" class="w-4 h-4 text-slate-500"></i>
+                </a>
+            </div>
+            <div class="pt-3 grid grid-cols-2 gap-3">
+                <a href="tel:6206082643" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-slate-800 text-slate-200 font-bold text-xs border border-slate-700">
+                    <i data-lucide="phone" class="w-4 h-4 text-emerald-400"></i> Call Cafe
+                </a>
+                <a href="https://wa.me/916206082643?text=Hello%20Ambe%20Solution,%20I%20need%20cyber%20cafe%20service" target="_blank" class="w-full flex items-center justify-center gap-2 py-3 rounded-xl bg-emerald-600 text-white font-bold text-xs shadow-md">
+                    <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative overflow-hidden pt-8 pb-20 lg:pt-16 lg:pb-28">
+        <!-- Background Ambient Glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-blue-600/15 rounded-full blur-[140px] pointer-events-none"></div>
+        <div class="absolute top-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute -bottom-10 left-10 w-80 h-80 bg-indigo-600/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Hero Content -->
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-cyan-500/30 text-cyan-400 text-xs font-semibold backdrop-blur-md shadow-sm">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                        <span>Trusted by 15,000+ Students & Villagers in Lakhisarai</span>
+                    </div>
+
+                    <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight sm:leading-none text-white">
+                        Your One-Stop <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-300 bg-clip-text text-transparent">Digital Hub</span> for Forms & Printing
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                        Fast, reliable, and error-free online services right at <strong>Mananpur Bazar, Lakhisarai</strong>. From competitive exam forms, RTPS caste/income certs, to high-speed color printing and instant PVC cards.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+                        <button onclick="openBookingModal('Urgent Form Submission')" class="px-6 py-3.5 rounded-2xl bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold text-sm sm:text-base shadow-xl shadow-cyan-500/20 transition transform hover:-translate-y-0.5 flex items-center gap-2.5">
+                            <i data-lucide="file-check-2" class="w-5 h-5"></i>
+                            <span>Send Document / Form Request</span>
+                        </button>
+                        <a href="https://wa.me/916206082643?text=Namaste%20Ambe%20Solution,%20I%20want%20to%20inquire%20about%20a%20service" target="_blank" class="px-6 py-3.5 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-lg shadow-emerald-700/25 transition transform hover:-translate-y-0.5 flex items-center gap-2.5">
+                            <i data-lucide="message-square" class="w-5 h-5"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <a href="#services" class="px-5 py-3.5 rounded-2xl bg-slate-800/80 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition flex items-center gap-2">
+                            <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                            <span>All Services</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Stats Bar -->
+                    <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-slate-800/80 mt-8">
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-cyan-400">100%</p>
+                            <p class="text-xs text-slate-400 font-medium">Error-Free Guarantee</p>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-blue-400">10+ Yrs</p>
+                            <p class="text-xs text-slate-400 font-medium">Cyber Experience</p>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-emerald-400">Instant</p>
+                            <p class="text-xs text-slate-400 font-medium">PVC & Photo Print</p>
+                        </div>
+                        <div class="text-left">
+                            <p class="text-2xl font-black text-amber-400">AEPS</p>
+                            <p class="text-xs text-slate-400 font-medium">Aadhaar Cash & Transfer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Hero Interactive Quick Booking Card -->
+                <div class="lg:col-span-5">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 shadow-2xl relative border border-slate-700/60">
+                        <div class="absolute -top-3 right-6 bg-gradient-to-r from-amber-500 to-orange-500 text-slate-950 font-black text-[11px] uppercase tracking-wider px-3 py-1 rounded-full shadow-lg">
+                            Fast Digital Desk
+                        </div>
+
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-white">Direct Service Dispatch</h3>
+                                <p class="text-xs text-slate-400">Send requirements via WhatsApp in 30 seconds</p>
+                            </div>
+                        </div>
+
+                        <!-- Mini Direct Form -->
+                        <form id="heroQuickForm" onsubmit="handleHeroQuickSubmit(event)" class="space-y-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Your Full Name</label>
+                                <div class="relative">
+                                    <i data-lucide="user" class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400"></i>
+                                    <input type="text" id="heroName" required placeholder="e.g. Rahul Kumar" class="w-full bg-slate-900/80 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Mobile / WhatsApp Number</label>
+                                <div class="relative">
+                                    <i data-lucide="phone" class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400"></i>
+                                    <input type="tel" id="heroPhone" required placeholder="10-digit Mobile Number" class="w-full bg-slate-900/80 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Required Service</label>
+                                <div class="relative">
+                                    <i data-lucide="layers" class="w-4 h-4 absolute left-3.5 top-3.5 text-slate-400"></i>
+                                    <select id="heroService" class="w-full bg-slate-900/80 border border-slate-700 rounded-xl pl-10 pr-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400">
+                                        <option value="Online Exam Form (Railway/BPSC/SSC)">Online Exam Form (Railway / BPSC / SSC)</option>
+                                        <option value="RTPS Bihar (Jati / Niwas / Aay Cert)">RTPS Bihar (Jati / Niwas / Aay Cert)</option>
+                                        <option value="PVC Smart Card Printing">PVC Smart Card Printing (Aadhaar / Voter)</option>
+                                        <option value="PAN Card New or Correction">PAN Card New or Correction</option>
+                                        <option value="Color or Bulk Project Xerox">Color or Bulk Project Xerox</option>
+                                        <option value="Train / Flight Ticket Booking">Train / Flight Ticket Booking</option>
+                                        <option value="AEPS Cash Withdrawal or Transfer">AEPS Cash Withdrawal / Money Transfer</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 mb-1">Short Note / Details</label>
+                                <textarea id="heroNotes" rows="2" placeholder="e.g. Apply for SSC GD, photo and sign ready..." class="w-full bg-slate-900/80 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-3 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold rounded-xl text-sm shadow-lg shadow-emerald-900/40 flex items-center justify-center gap-2 transition">
+                                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                                <span>Send Directly to WhatsApp</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-6 bg-slate-900/60 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="p-2.5 rounded-xl bg-blue-500/10 text-blue-400"><i data-lucide="zap" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Super Fast Processing</h4>
+                        <p class="text-xs text-slate-400">No long queues or server delays</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="p-2.5 rounded-xl bg-cyan-500/10 text-cyan-400"><i data-lucide="printer" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Heavy-Duty Printing</h4>
+                        <p class="text-xs text-slate-400">High-DPI Color & B/W Xerox</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="p-2.5 rounded-xl bg-emerald-500/10 text-emerald-400"><i data-lucide="credit-card" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">Smart PVC Cards</h4>
+                        <p class="text-xs text-slate-400">Waterproof Aadhaar & PAN Cards</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3.5 p-3 rounded-2xl bg-slate-800/40 border border-slate-800">
+                    <div class="p-2.5 rounded-xl bg-amber-500/10 text-amber-400"><i data-lucide="lock" class="w-5 h-5"></i></div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white">100% Data Confidentiality</h4>
+                        <p class="text-xs text-slate-400">Secure credential handling</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-3 py-1 rounded-full">Explore Catalog</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Comprehensive Cyber & Digital Services</h2>
+                <p class="text-slate-400 mt-2 text-sm sm:text-base">Everything you need for government portals, examinations, printing, and banking under one roof.</p>
+
+                <!-- Filter Buttons -->
+                <div class="flex flex-wrap items-center justify-center gap-2 mt-8" id="serviceFilterBtns">
+                    <button onclick="filterServices('all')" class="filter-btn active-filter px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-blue-600 text-white" data-filter="all">All Services</button>
+                    <button onclick="filterServices('exams')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="exams">Online Exam Forms</button>
+                    <button onclick="filterServices('govt')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="govt">Govt & RTPS Bihar</button>
+                    <button onclick="filterServices('print')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="print">Printing & PVC</button>
+                    <button onclick="filterServices('banking')" class="filter-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition bg-slate-800 text-slate-300 hover:bg-slate-700" data-filter="banking">Banking & Tickets</button>
+                </div>
+            </div>
+
+            <!-- Service Cards Grid -->
+            <div id="servicesContainer" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Service 1 -->
+                <div class="service-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="exams">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center mb-4">
+                            <i data-lucide="graduation-cap" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-blue-400 bg-blue-950/60 px-2 py-0.5 rounded">Exam Forms</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Sarkari & Competitive Forms</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Accurate application for Railway RRB, BPSC TRE, Bihar Police/Daroga, SSC GD/CGL/CHSL, CTET, ITI, Polytechnic & Army Agniveer.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Admit Card Download & Color Print</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Answer Key & Result Checking</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Free Document Verification Check</li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('Exam Form Submission')" class="mt-6 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-blue-600 text-slate-200 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Apply for Exam</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="govt">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center mb-4">
+                            <i data-lucide="landmark" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-cyan-400 bg-cyan-950/60 px-2 py-0.5 rounded">RTPS Bihar</span>
+                        <h3 class="text-xl font-bold text-white mt-2">RTPS Certificates & Bihar Portals</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Official application for Caste (Jati), Residential (Niwas), Income (Aay), Non-Creamy Layer (OBC-NCL), and General EWS certificates.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Land Record / Jamabandi / Dakhil Kharij</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Bihar Ration Card Apply & Name Addition</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Tatkal Certificate Tracking</li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('RTPS Certificate Apply')" class="mt-6 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-cyan-600 text-slate-200 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Apply Certificate</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="govt">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/15 text-emerald-400 flex items-center justify-center mb-4">
+                            <i data-lucide="contact" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded">Identity Cards</span>
+                        <h3 class="text-xl font-bold text-white mt-2">PAN Card & Voter ID Services</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Instant New PAN card generation via Aadhaar Biometric / OTP in just 2 hours! Minor PAN and name/DOB correction services.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> New Voter Card (Form 6) & Correction (Form 8)</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Aadhaar Card Masked & Full Color Print</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Ayushman Bharat Golden Card Download</li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('PAN / Identity Card Service')" class="mt-6 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-emerald-600 text-slate-200 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Get PAN / Voter</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="print">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/15 text-amber-400 flex items-center justify-center mb-4">
+                            <i data-lucide="printer" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-amber-400 bg-amber-950/60 px-2 py-0.5 rounded">Print & Photocopy</span>
+                        <h3 class="text-xl font-bold text-white mt-2">High-Speed Xerox & Color Prints</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Heavy-duty commercial laser machines for sharp black & white and vivid glossy color printing. Ideal for books, project files, and notes.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Bulk Xerox at lowest price in Mananpur</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> High-Grade Spiral Binding & Lamination</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Instant 8/16/32 Pcs Passport Photos</li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('Xerox and Printing Order')" class="mt-6 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-amber-600 text-slate-200 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Order Printing</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="print">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center mb-4">
+                            <i data-lucide="id-card" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-purple-400 bg-purple-950/60 px-2 py-0.5 rounded">PVC Smart Card</span>
+                        <h3 class="text-xl font-bold text-white mt-2">Smart PVC Plastic Cards</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Premium ATM-grade waterproof PVC printing for Aadhaar card, PAN card, Driving License, Voter ID, e-Shram, and School/College IDs.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Long lasting, waterproof & scratch resistant</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Done within 2-3 minutes directly at shop</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Original high definition colors</li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('PVC Card Printing')" class="mt-6 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-purple-600 text-slate-200 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Print PVC Card</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card glass-card rounded-2xl p-6 border border-slate-800 hover:border-cyan-500/50 transition-all duration-300 flex flex-col justify-between" data-category="banking">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-teal-500/15 text-teal-400 flex items-center justify-center mb-4">
+                            <i data-lucide="badge-indian-rupee" class="w-6 h-6"></i>
+                        </div>
+                        <span class="text-[10px] font-bold tracking-wider uppercase text-teal-400 bg-teal-950/60 px-2 py-0.5 rounded">Digital Banking</span>
+                        <h3 class="text-xl font-bold text-white mt-2">AEPS Cash, Transfer & Tickets</h3>
+                        <p class="text-slate-400 text-xs sm:text-sm mt-2 leading-relaxed">
+                            Mini banking customer service point. Aadhaar fingerprint cash withdrawal (AEPS), instant money transfer, electricity bills, and travel bookings.
+                        </p>
+                        <ul class="mt-4 space-y-1.5 text-xs text-slate-300 font-medium">
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Cash Withdrawal for all Indian Banks</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Confirmed IRCTC Train & Flight Booking</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-3.5 h-3.5 text-emerald-400"></i> Bijli Bill (NBPDCL / SBPDCL) Payment</li>
+                        </ul>
+                    </div>
+                    <button onclick="openBookingModal('Banking or Ticket Service')" class="mt-6 w-full py-2.5 rounded-xl bg-slate-800 hover:bg-teal-600 text-slate-200 hover:text-white font-semibold text-xs transition flex items-center justify-center gap-2">
+                        <span>Book Service</span>
+                        <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="calculator" class="py-16 bg-slate-900/80 border-y border-slate-800 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-8 items-center">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-950/60 border border-amber-800/50 px-3 py-1 rounded-full">Transparent Pricing</span>
+                    <h2 class="text-2xl sm:text-4xl font-extrabold text-white">Instant Service Rate Estimator</h2>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Calculate an estimated cost for your prints, photo sessions, PVC cards, and online form applications before visiting the cafe.
+                    </p>
+                    <div class="space-y-3 pt-2">
+                        <div class="flex items-center gap-3 text-xs text-slate-400">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                            <span>No hidden charges, honest standard rates</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-slate-400">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Special discounts for bulk school/college notes</span>
+                        </div>
+                        <div class="flex items-center gap-3 text-xs text-slate-400">
+                            <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                            <span>Free document stapling included</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculator Box -->
+                <div class="lg:col-span-7">
+                    <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-700">
+                        <div class="grid sm:grid-cols-2 gap-5 mb-6">
+                            
+                            <!-- B/W Xerox Quantity -->
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-bold text-slate-300">B/W Photocopy (₹2/page)</span>
+                                    <span id="bwQtyDisplay" class="text-cyan-400 font-mono text-sm font-bold">0 pgs</span>
+                                </div>
+                                <input type="range" id="bwSlider" min="0" max="100" value="0" step="5" oninput="calculateEstimate()" class="w-full accent-cyan-400 bg-slate-800 h-2 rounded-lg cursor-pointer">
+                            </div>
+
+                            <!-- Color Print Quantity -->
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-bold text-slate-300">Color Print (₹10/page)</span>
+                                    <span id="colorQtyDisplay" class="text-cyan-400 font-mono text-sm font-bold">0 pgs</span>
+                                </div>
+                                <input type="range" id="colorSlider" min="0" max="50" value="0" step="1" oninput="calculateEstimate()" class="w-full accent-cyan-400 bg-slate-800 h-2 rounded-lg cursor-pointer">
+                            </div>
+
+                            <!-- PVC Smart Card -->
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-bold text-slate-300">PVC Card Print (₹50/card)</span>
+                                    <span id="pvcQtyDisplay" class="text-cyan-400 font-mono text-sm font-bold">0 card</span>
+                                </div>
+                                <input type="range" id="pvcSlider" min="0" max="5" value="0" step="1" oninput="calculateEstimate()" class="w-full accent-cyan-400 bg-slate-800 h-2 rounded-lg cursor-pointer">
+                            </div>
+
+                            <!-- Lamination -->
+                            <div class="bg-slate-900/90 p-4 rounded-2xl border border-slate-800">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="text-xs font-bold text-slate-300">Lamination (₹20/sheet)</span>
+                                    <span id="lamQtyDisplay" class="text-cyan-400 font-mono text-sm font-bold">0 sheet</span>
+                                </div>
+                                <input type="range" id="lamSlider" min="0" max="10" value="0" step="1" oninput="calculateEstimate()" class="w-full accent-cyan-400 bg-slate-800 h-2 rounded-lg cursor-pointer">
+                            </div>
+
+                        </div>
+
+                        <!-- Add-ons Checkboxes -->
+                        <div class="grid sm:grid-cols-2 gap-3 mb-6 text-xs text-slate-300">
+                            <label class="flex items-center gap-2 p-3 bg-slate-900/60 rounded-xl border border-slate-800 cursor-pointer hover:bg-slate-800/80 transition">
+                                <input type="checkbox" id="chkForm" onchange="calculateEstimate()" class="w-4 h-4 rounded text-cyan-500 accent-cyan-500">
+                                <span>Online Form Fill Charge (+₹70)</span>
+                            </label>
+                            <label class="flex items-center gap-2 p-3 bg-slate-900/60 rounded-xl border border-slate-800 cursor-pointer hover:bg-slate-800/80 transition">
+                                <input type="checkbox" id="chkPhoto" onchange="calculateEstimate()" class="w-4 h-4 rounded text-cyan-500 accent-cyan-500">
+                                <span>8 Pcs Passport Size Photo (+₹40)</span>
+                            </label>
+                        </div>
+
+                        <!-- Price Total Bar -->
+                        <div class="bg-gradient-to-r from-blue-950 to-indigo-950 p-5 rounded-2xl border border-blue-800/60 flex flex-wrap items-center justify-between gap-4">
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase font-semibold">Estimated Total Cost</p>
+                                <p class="text-3xl font-black text-cyan-300" id="totalPrice">₹0</p>
+                            </div>
+                            <div class="flex gap-2">
+                                <button onclick="resetCalculator()" class="px-3.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-300 transition">
+                                    Reset
+                                </button>
+                                <button onclick="orderEstimatedItems()" class="px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold text-xs flex items-center gap-1.5 shadow-lg shadow-cyan-900/40 transition">
+                                    <i data-lucide="send" class="w-3.5 h-3.5"></i>
+                                    <span>Send Estimate to Shop</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="specs" class="py-16 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-950/60 border border-emerald-800/50 px-3 py-1 rounded-full">Student Helper Guide</span>
+                <h2 class="text-3xl font-extrabold text-white mt-2">Exam Upload Guidelines & Specifications</h2>
+                <p class="text-slate-400 text-xs sm:text-sm mt-1">Never get your application form rejected. Here are the exact file parameters required by BPSC, SSC & Railway.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Spec 1: Photo -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 relative overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/15 text-blue-400 flex items-center justify-center mb-4">
+                        <i data-lucide="image" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Passport Photograph</h3>
+                    <p class="text-xs text-slate-400 mt-1">White or Light background mandatory. Clear ears & face.</p>
+                    
+                    <div class="mt-4 space-y-2 text-xs bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+                        <div class="flex justify-between"><span class="text-slate-400">File Format:</span> <span class="font-bold text-white">JPG / JPEG</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">File Size:</span> <span class="font-bold text-cyan-400">20 KB – 50 KB</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Dimensions:</span> <span class="font-bold text-white">3.5 cm × 4.5 cm</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Pixel Size:</span> <span class="font-bold text-white">~200 × 230 Pixels</span></div>
+                    </div>
+                    <div class="mt-4 text-[11px] text-emerald-400 flex items-center gap-1.5 font-medium">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> We resize & edit instantly at Ambe Cafe!
+                    </div>
+                </div>
+
+                <!-- Spec 2: Signature -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 relative overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/15 text-cyan-400 flex items-center justify-center mb-4">
+                        <i data-lucide="pen-tool" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Signature (Sign)</h3>
+                    <p class="text-xs text-slate-400 mt-1">Dark Black or Blue ink pen on plain white paper.</p>
+                    
+                    <div class="mt-4 space-y-2 text-xs bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+                        <div class="flex justify-between"><span class="text-slate-400">File Format:</span> <span class="font-bold text-white">JPG / JPEG</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">File Size:</span> <span class="font-bold text-cyan-400">10 KB – 20 KB</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Dimensions:</span> <span class="font-bold text-white">3.5 cm × 1.5 cm</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Pixel Size:</span> <span class="font-bold text-white">~140 × 60 Pixels</span></div>
+                    </div>
+                    <div class="mt-4 text-[11px] text-emerald-400 flex items-center gap-1.5 font-medium">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> High-contrast B/W scanning available!
+                    </div>
+                </div>
+
+                <!-- Spec 3: Documents / Certificates -->
+                <div class="glass-card rounded-2xl p-6 border border-slate-800 relative overflow-hidden">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/15 text-purple-400 flex items-center justify-center mb-4">
+                        <i data-lucide="file-text" class="w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Certificates & Marksheets</h3>
+                    <p class="text-xs text-slate-400 mt-1">10th, 12th, Graduation, Caste, Niwas or EWS.</p>
+                    
+                    <div class="mt-4 space-y-2 text-xs bg-slate-900/80 p-3.5 rounded-xl border border-slate-800">
+                        <div class="flex justify-between"><span class="text-slate-400">File Format:</span> <span class="font-bold text-white">PDF / JPEG</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">File Size:</span> <span class="font-bold text-cyan-400">100 KB – 300 KB</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Resolution:</span> <span class="font-bold text-white">150 to 200 DPI</span></div>
+                        <div class="flex justify-between"><span class="text-slate-400">Quality:</span> <span class="font-bold text-white">Unblurred Text</span></div>
+                    </div>
+                    <div class="mt-4 text-[11px] text-emerald-400 flex items-center gap-1.5 font-medium">
+                        <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Multi-page PDF merger and reducer ready!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-slate-900/40 border-y border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-3 py-1 rounded-full">Local Trust</span>
+                <h2 class="text-3xl font-extrabold text-white mt-2">Why Lakhisarai Chooses Ambe Solution</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center gap-1 text-amber-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 italic">"I filled my BPSC TRE application here. Bhaiya checked every column twice, verified my CTET roll number, and printed a crystal clear acknowledgement. No server stress!"</p>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-white">Amit Kumar Sharma</p>
+                            <p class="text-[11px] text-slate-400">Teacher Aspirant, Lakhisarai</p>
+                        </div>
+                        <span class="text-[10px] bg-slate-800 text-emerald-400 font-semibold px-2 py-0.5 rounded">Verified</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center gap-1 text-amber-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 italic">"Got my smart PVC Aadhaar & PAN card made in literally 5 minutes. The quality is like an original ATM card, completely waterproof. Best cyber shop in Mananpur Bazar."</p>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-white">Vikram Mandal</p>
+                            <p class="text-[11px] text-slate-400">Mananpur Bazar</p>
+                        </div>
+                        <span class="text-[10px] bg-slate-800 text-emerald-400 font-semibold px-2 py-0.5 rounded">Verified</span>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-2xl border border-slate-800">
+                    <div class="flex items-center gap-1 text-amber-400 mb-3">
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                        <i data-lucide="star" class="w-4 h-4 fill-amber-400"></i>
+                    </div>
+                    <p class="text-xs sm:text-sm text-slate-300 italic">"Sent my marksheets and documents over WhatsApp from home, and when I arrived at the cafe, all color copies, spiral binding, and passport photos were ready!"</p>
+                    <div class="mt-4 pt-3 border-t border-slate-800 flex items-center justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-white">Puja Kumari</p>
+                            <p class="text-[11px] text-slate-400">College Student</p>
+                        </div>
+                        <span class="text-[10px] bg-slate-800 text-emerald-400 font-semibold px-2 py-0.5 rounded">Verified</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-10">
+                
+                <!-- Contact Info Details -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-950/60 border border-cyan-800/50 px-3 py-1 rounded-full">Visit Our Shop</span>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Get In Touch With Us</h2>
+                        <p class="text-slate-400 text-sm mt-2">
+                            Located conveniently on High School Road, Mananpur Bazar. Reach out anytime via phone call or WhatsApp for quick inquiries.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Address Card -->
+                        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-blue-500/10 text-cyan-400 shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Shop Address</h4>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-0.5">Ambe Solution & Cyber Cafe, High School Road, Mananpur Bazar, Lakhisarai, Bihar - 811310</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone / WhatsApp Card -->
+                        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Call / WhatsApp Support</h4>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-0.5">Direct: +91 6206082643</p>
+                                <div class="flex gap-3 mt-2">
+                                    <a href="tel:6206082643" class="text-xs text-cyan-400 font-semibold hover:underline flex items-center gap-1">
+                                        <i data-lucide="phone-outgoing" class="w-3.5 h-3.5"></i> Call Now
+                                    </a>
+                                    <a href="https://wa.me/916206082643" target="_blank" class="text-xs text-emerald-400 font-semibold hover:underline flex items-center gap-1">
+                                        <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Open WhatsApp
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Business Hours Card -->
+                        <div class="p-4 rounded-2xl bg-slate-900 border border-slate-800 flex items-start gap-4">
+                            <div class="p-3 rounded-xl bg-amber-500/10 text-amber-400 shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-sm font-bold text-white">Working Hours</h4>
+                                <p class="text-xs sm:text-sm text-slate-300 mt-0.5">Monday to Sunday (Open 7 Days): <strong>7:00 AM – 8:30 PM</strong></p>
+                                <p class="text-[11px] text-slate-400 mt-0.5">Emergency form submissions supported beyond closing hours on request.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Location Map Mockup & Directions -->
+                <div class="lg:col-span-6 flex flex-col justify-between">
+                    <div class="glass-card rounded-3xl p-6 border border-slate-700 h-full flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between mb-4">
+                                <h3 class="text-base font-bold text-white flex items-center gap-2">
+                                    <i data-lucide="navigation" class="w-4 h-4 text-cyan-400"></i> Location Route Guide
+                                </h3>
+                                <span class="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded-md border border-slate-700">Near High School Gate</span>
+                            </div>
+                            <!-- Stylized Visual Map Display -->
+                            <div class="relative w-full h-64 bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 flex items-center justify-center p-4 text-center">
+                                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-950 to-blue-950 opacity-90"></div>
+                                <!-- Grid Lines Mockup -->
+                                <div class="absolute inset-0 opacity-15" style="background-image: radial-gradient(#38bdf8 1px, transparent 1px); background-size: 20px 20px;"></div>
+                                
+                                <div class="relative z-10 space-y-3">
+                                    <div class="w-14 h-14 bg-red-600/20 text-red-400 border border-red-500/40 rounded-full mx-auto flex items-center justify-center animate-bounce">
+                                        <i data-lucide="map-pin" class="w-7 h-7"></i>
+                                    </div>
+                                    <h4 class="text-white font-bold text-base">Ambe Solution & Cyber Cafe</h4>
+                                    <p class="text-xs text-slate-300 max-w-xs mx-auto">High School Road, Mananpur Bazar, Lakhisarai, Bihar</p>
+                                    <span class="inline-block text-[11px] bg-cyan-900/60 text-cyan-300 border border-cyan-700/50 px-3 py-1 rounded-full">
+                                        Opposite / Adjacent to Main High School Road
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pt-6">
+                            <a href="https://maps.google.com/?q=Mananpur+Bazar+Lakhisarai+Bihar" target="_blank" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-500 hover:to-cyan-500 text-white font-bold text-sm flex items-center justify-center gap-2 shadow-lg transition">
+                                <i data-lucide="map" class="w-4 h-4"></i>
+                                <span>Get Directions on Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 border-t border-slate-900 py-10 text-xs text-slate-400">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-blue-600/30 text-cyan-400 flex items-center justify-center">
+                        <i data-lucide="cpu" class="w-4 h-4"></i>
+                    </div>
+                    <div>
+                        <span class="font-bold text-slate-200 text-sm">Ambe Solution & Cyber Cafe</span>
+                        <p class="text-[11px] text-slate-500">Mananpur Bazar, Lakhisarai, Bihar • Ph: 6206082643</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-6 font-medium text-slate-400">
+                    <a href="#home" class="hover:text-cyan-400">Home</a>
+                    <a href="#services" class="hover:text-cyan-400">Services</a>
+                    <a href="#calculator" class="hover:text-cyan-400">Price Estimator</a>
+                    <a href="#specs" class="hover:text-cyan-400">Exam Photo Specs</a>
+                    <a href="#contact" class="hover:text-cyan-400">Contact</a>
+                </div>
+
+                <p class="text-[11px] text-slate-500">
+                    © 2026 Ambe Solution & Cyber Cafe. All Rights Reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="bookingModal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-sm">
+        <div class="glass-card bg-slate-900 rounded-3xl max-w-lg w-full p-6 sm:p-8 border border-slate-700 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            
+            <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-xl bg-slate-800/80">
+                <i data-lucide="x" class="w-5 h-5"></i>
+            </button>
+
+            <div class="flex items-center gap-3 mb-5">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center">
+                    <i data-lucide="file-up" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Online Service Booking</h3>
+                    <p class="text-xs text-slate-400">Generates instant reference ID & WhatsApp ticket</p>
+                </div>
+            </div>
+
+            <form id="bookingForm" onsubmit="handleModalBookingSubmit(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Customer Name *</label>
+                    <input type="text" id="modalName" required placeholder="Enter your full name" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Mobile / WhatsApp Number *</label>
+                    <input type="tel" id="modalPhone" required placeholder="10-digit phone number" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Service Type *</label>
+                    <select id="modalServiceType" class="w-full bg-slate-950 border border-slate-700 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400">
+                        <option value="Railway / BPSC / SSC Exam Form">Railway / BPSC / SSC Exam Form</option>
+                        <option value="RTPS Bihar Caste/Income/Niwas">RTPS Bihar Caste / Income / Niwas Certificate</option>
+                        <option value="Urgent PVC Aadhaar / PAN Print">Urgent PVC Smart Card Print</option>
+                        <option value="High Speed Color / BW Xerox">High Speed Color / BW Xerox</option>
+                        <option value="Train / Flight Ticket Booking">Train / Flight Ticket Booking</option>
+                        <option value="Aadhaar Cash AEPS Withdrawal">Aadhaar Cash AEPS Withdrawal</option>
+                        <option value="Resume / Bio-Data Making">Resume / Bio-Data Making</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Document Types Available with You</label>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300">
+                        <label class="flex items-center gap-1.5 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                            <input type="checkbox" name="docType" value="Aadhaar Card" class="accent-cyan-400">
+                            <span>Aadhaar Card</span>
+                        </label>
+                        <label class="flex items-center gap-1.5 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                            <input type="checkbox" name="docType" value="Photo & Sign" class="accent-cyan-400">
+                            <span>Photo & Sign</span>
+                        </label>
+                        <label class="flex items-center gap-1.5 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                            <input type="checkbox" name="docType" value="10th/12th Marksheet" class="accent-cyan-400">
+                            <span>10th/12th Marksheet</span>
+                        </label>
+                        <label class="flex items-center gap-1.5 p-2 bg-slate-950 rounded-lg border border-slate-800 cursor-pointer">
+                            <input type="checkbox" name="docType" value="Old Application / PDF" class="accent-cyan-400">
+                            <span>Old Doc / PDF</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold text-slate-300 mb-1">Specific Instructions / Urgent Notes</label>
+                    <textarea id="modalNotes" rows="2" placeholder="e.g. Please check if last date has passed..." class="w-full bg-slate-950 border border-slate-700 rounded-xl px-3.5 py-2 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400"></textarea>
+                </div>
+
+                <!-- Live Reference Preview -->
+                <div class="p-3 bg-cyan-950/40 rounded-xl border border-cyan-800/40 flex items-center justify-between text-xs">
+                    <span class="text-slate-400">Auto Generated Reference:</span>
+                    <span id="previewRefCode" class="font-mono font-bold text-cyan-300">AS-XXXX</span>
+                </div>
+
+                <button type="submit" class="w-full py-3.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold text-sm shadow-xl flex items-center justify-center gap-2 transition">
+                    <i data-lucide="message-square" class="w-4 h-4"></i>
+                    <span>Generate Ticket & Chat on WhatsApp</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toastNotification" class="fixed bottom-24 left-1/2 -translate-x-1/2 z-50 hidden bg-slate-900 border border-cyan-500/40 text-white text-xs sm:text-sm px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3">
+        <i data-lucide="check-circle" class="w-5 h-5 text-emerald-400"></i>
+        <span id="toastMessage">Action completed successfully!</span>
+    </div>
+
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-end space-y-3">
+        <a href="https://wa.me/916206082643?text=Namaste%20Ambe%20Solution,%20I%20have%20an%20urgent%20service%20request" target="_blank" aria-label="Direct WhatsApp Chat" class="group relative flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full shadow-2xl shadow-emerald-600/50 hover:scale-110 transition-all duration-300">
+            <i data-lucide="message-circle" class="w-7 h-7"></i>
+            <span class="absolute right-16 bg-slate-900 text-white text-xs font-bold py-1.5 px-3 rounded-xl border border-slate-800 shadow-xl opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">
+                WhatsApp Us (6206082643)
+            </span>
+        </a>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            generateRefCode();
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking navigation links
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Random Reference Code Generator
+        function generateRefCode() {
+            const randomNum = Math.floor(1000 + Math.random() * 9000);
+            const ref = `AS-${randomNum}`;
+            const el = document.getElementById('previewRefCode');
+            if (el) el.innerText = ref;
+            return ref;
+        }
+
+        // Service Category Filter Logic
+        function filterServices(category) {
+            const cards = document.querySelectorAll('.service-card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-filter') === category) {
+                    btn.classList.add('bg-blue-600', 'text-white');
+                    btn.classList.remove('bg-slate-800', 'text-slate-300');
+                } else {
+                    btn.classList.remove('bg-blue-600', 'text-white');
+                    btn.classList.add('bg-slate-800', 'text-slate-300');
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Price Estimator Logic
+        function calculateEstimate() {
+            const bwQty = parseInt(document.getElementById('bwSlider').value) || 0;
+            const colorQty = parseInt(document.getElementById('colorSlider').value) || 0;
+            const pvcQty = parseInt(document.getElementById('pvcSlider').value) || 0;
+            const lamQty = parseInt(document.getElementById('lamSlider').value) || 0;
+            const chkForm = document.getElementById('chkForm').checked;
+            const chkPhoto = document.getElementById('chkPhoto').checked;
+
+            // Update Label displays
+            document.getElementById('bwQtyDisplay').innerText = `${bwQty} pgs`;
+            document.getElementById('colorQtyDisplay').innerText = `${colorQty} pgs`;
+            document.getElementById('pvcQtyDisplay').innerText = `${pvcQty} card`;
+            document.getElementById('lamQtyDisplay').innerText = `${lamQty} sheet`;
+
+            // Calculate cost
+            let total = (bwQty * 2) + (colorQty * 10) + (pvcQty * 50) + (lamQty * 20);
+            if (chkForm) total += 70;
+            if (chkPhoto) total += 40;
+
+            document.getElementById('totalPrice').innerText = `₹${total}`;
+        }
+
+        function resetCalculator() {
+            document.getElementById('bwSlider').value = 0;
+            document.getElementById('colorSlider').value = 0;
+            document.getElementById('pvcSlider').value = 0;
+            document.getElementById('lamSlider').value = 0;
+            document.getElementById('chkForm').checked = false;
+            document.getElementById('chkPhoto').checked = false;
+            calculateEstimate();
+        }
+
+        function orderEstimatedItems() {
+            const bw = document.getElementById('bwSlider').value;
+            const color = document.getElementById('colorSlider').value;
+            const pvc = document.getElementById('pvcSlider').value;
+            const lam = document.getElementById('lamSlider').value;
+            const form = document.getElementById('chkForm').checked ? 'Yes' : 'No';
+            const photo = document.getElementById('chkPhoto').checked ? 'Yes' : 'No';
+            const price = document.getElementById('totalPrice').innerText;
+
+            const text = `Hello Ambe Solution, I used your website price calculator:%0A- BW Prints: ${bw}%0A- Color Prints: ${color}%0A- PVC Cards: ${pvc}%0A- Lamination: ${lam}%0A- Form Fill: ${form}%0A- Passport Photo: ${photo}%0AEstimated Total: ${price}%0APlease let me know the turnaround time!`;
+            window.open(`https://wa.me/916206082643?text=${text}`, '_blank');
+        }
+
+        // Booking Modal Handlers
+        function openBookingModal(defaultService = '') {
+            generateRefCode();
+            if (defaultService) {
+                const select = document.getElementById('modalServiceType');
+                for (let i = 0; i < select.options.length; i++) {
+                    if (select.options[i].text.toLowerCase().includes(defaultService.toLowerCase())) {
+                        select.selectedIndex = i;
+                        break;
+                    }
+                }
+            }
+            document.getElementById('bookingModal').classList.remove('hidden');
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.add('hidden');
+        }
+
+        // Hero Quick Form Submission
+        function handleHeroQuickSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('heroName').value.trim();
+            const phone = document.getElementById('heroPhone').value.trim();
+            const service = document.getElementById('heroService').value;
+            const notes = document.getElementById('heroNotes').value.trim() || 'None';
+            const ref = generateRefCode();
+
+            const msg = `*New Request - Ambe Solution*%0A*Ref:* ${ref}%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Note:* ${notes}`;
+            showToast(`Generating request ticket ${ref}...`);
+
+            setTimeout(() => {
+                window.open(`https://wa.me/916206082643?text=${msg}`, '_blank');
+            }, 500);
+        }
+
+        // Modal Form Submission
+        function handleModalBookingSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('modalName').value.trim();
+            const phone = document.getElementById('modalPhone').value.trim();
+            const service = document.getElementById('modalServiceType').value;
+            const notes = document.getElementById('modalNotes').value.trim() || 'None';
+            const ref = document.getElementById('previewRefCode').innerText;
+
+            const checkboxes = document.querySelectorAll('input[name="docType"]:checked');
+            const selectedDocs = Array.from(checkboxes).map(cb => cb.value).join(', ') || 'Will share';
+
+            const msg = `*Online Booking - Ambe Solution*%0A*Ticket ID:* ${ref}%0A*Customer:* ${name}%0A*Contact:* ${phone}%0A*Service Requested:* ${service}%0A*Available Docs:* ${selectedDocs}%0A*Message:* ${notes}`;
+
+            closeBookingModal();
+            showToast(`Booking ${ref} Created! Redirecting to WhatsApp...`);
+
+            setTimeout(() => {
+                window.open(`https://wa.me/916206082643?text=${msg}`, '_blank');
+            }, 600);
+        }
+
+        // Notification Toast Helper
+        function showToast(text) {
+            const toast = document.getElementById('toastNotification');
+            const msgEl = document.getElementById('toastMessage');
+            msgEl.innerText = text;
+            toast.classList.remove('hidden');
+            setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3800);
+        }
+    </script>
+</body>
+</html>
